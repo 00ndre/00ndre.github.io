@@ -1,0 +1,75 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgba(2, 27, 33, 1);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Фоновое изображение */
+.background-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+    opacity: 1;
+}
+
+/* Шапка */
+header {
+    padding: 20px 10px;
+}
+
+header a.logo img {
+    height: 50px; /* Размер логотипа */
+}
+
+/* Главный контент */
+.main {
+    padding: 40px 0;
+}
+
+.intro-card h1 {
+    color: rgba(55, 55, 55, 1);
+    font-size: 24px; /* Уменьшенный размер шрифта для мобильных */
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgba(55, 55, 55, 1);
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.link:hover {
+    background-color: rgba(23, 165, 201, 0.8);
+    color: white;
+}
