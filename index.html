@@ -3,32 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vrum Vrum</title>
-    <link rel="stylesheet" href="./assets/style/style.css">
+    <title>VRUM VRUM | Велосервис</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background: #02ABFF;
+            color: white;
+            line-height: 1.6;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .avatar {
+            width: 200px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .bio {
+            color: #fff;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .social-block {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .social-block:hover {
+            transform: translateY(-3px);
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .social-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .social-icon {
+            font-size: 32px;
+            width: 50px;
+            text-align: center;
+        }
+
+        .social-text {
+            flex: 1;
+        }
+
+        .social-title {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .social-description {
+            font-size: 0.9em;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .avatar {
+                width: 180px;
+                height: 90px;
+            }
+            
+            .social-block {
+                padding: 15px;
+            }
+            
+            .social-icon {
+                font-size: 28px;
+            }
+            
+            .social-title {
+                font-size: 1.1em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <img src="./assets/images/back.png" class="background-image">
-    <header>
-        <div class="container">
-            <!-- Логотип -->
-            <a href="#" class="logo">
-                <img src="./assets/images/logo.png" alt="Логотип компании" class="logo">
+    <div class="container">
+        <div class="profile">
+            <img src="./assets/logo-vector.svg" alt="Логотип" class="avatar">
+            <p class="bio">Аренда, ремонт, ТО велосипедов и Электровелосипедов в Великом Новгороде</p>
+        </div>
+
+        <div class="links">
+            <a href="https://vk.com/vrumvrum53" class="social-block">
+                <div class="social-content">
+                    <div class="social-icon"><i class="fab fa-vk"></i></div>
+                    <div class="social-text">
+                        <div class="social-title">ВКонтакте</div>
+                        <div class="social-description">Следите за акциями и новостями, связывайтесь через сообщения сообщества</div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://t.me/vrumvrum53" class="social-block">
+                <div class="social-content">
+                    <div class="social-icon"><i class="fab fa-telegram"></i></div>
+                    <div class="social-text">
+                        <div class="social-title">Телеграм-чат</div>
+                        <div class="social-description">Подробный прайс лист</div>
+                    </div>
+                </div>
             </a>
         </div>
-    </header>
-
-    <main class="main">
-        <div class="container">
-            <section class="intro-card">
-                <h1>Аренда электровелосипедов в Великом Новгороде</h1>
-            </section>
-            <section class="links">
-                <a href="#" class="link">Instagram</a>
-                <a href="#" class="link">Facebook</a>
-                <a href="#" class="link">Twitter</a>
-                <a href="#" class="link">YouTube</a>
-            </section>
-        </div>
-    </main>
+    </div>
 </body>
 </html>
