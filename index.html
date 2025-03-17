@@ -33,6 +33,37 @@
             padding: 20px;
         }
 
+
+
+.map-container {
+        width: 100%;
+        height: 600px;
+        position: relative;
+        margin: 20px 0;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .map-link {
+        font-size: 10px;
+        padding: 0 16px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+        color: #b3b3b3;
+        text-decoration: none;
+    }
+
+
+
+
         .profile {
             text-align: center;
             margin-bottom: 30px;
@@ -106,6 +137,11 @@
         }
 
         @media (max-width: 768px) {
+
+            .map-container {
+                height: 400px;
+            }
+
             .container {
                 padding: 15px;
             }
@@ -169,9 +205,14 @@
 
 
 
-            <div style="width:560px;height:800px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/100250847823?comments"></iframe><a href="https://yandex.ru/maps/org/vrumvrum/100250847823/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">VrumVrum на карте Великого Новгорода — Яндекс Карты</a></div>
-
-        </div>
+            <div class="map-container">
+                <iframe src="https://yandex.ru/maps-reviews-widget/100250847823?comments"></iframe>
+                <a href="https://yandex.ru/maps/org/vrumvrum/100250847823/" 
+                    target="_blank" 
+                    class="map-link">
+                    VrumVrum на карте Великого Новгорода — Яндекс Карты
+                </a>
+            </div>
     </div>
 </body>
 </html>
