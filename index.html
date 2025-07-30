@@ -1,218 +1,60 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile First Site</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <link rel="icon" href="icon.ico">
-    
-    <title>VRUM VRUM Великий Новгород</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-
-    
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        body {
-            background: #02ABFF;
-            color: white;
-            line-height: 1.6;
-            font-weight: 600;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-
-
-.map-container {
-        width: 100%;
-        height: 600px;
-        position: relative;
-        margin: 20px 0;
-        border-radius: 15px;
-        overflow: hidden;
-    }
-
-    .map-container iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-
-    .map-link {
-        font-size: 10px;
-        padding: 0 16px;
-        position: absolute;
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
-        color: #b3b3b3;
-        text-decoration: none;
-    }
-
-
-
-
-        .profile {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .avatar {
-            width: 200px;
-            height: 100px;
-            margin-bottom: 15px;
-        }
-
-        .name {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        .bio {
-            color: #fff;
-            margin-bottom: 30px;
-            font-size: 1.1em;
-        }
-
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .social-block {
-            background: rgba(255,255,255,0.1);
-            padding: 20px;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: white;
-            border: 2px solid rgba(255,255,255,0.2);
-        }
-
-        .social-block:hover {
-            transform: translateY(-3px);
-            background: rgba(255,255,255,0.15);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .social-content {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .social-icon {
-            font-size: 32px;
-            width: 50px;
-            text-align: center;
-        }
-
-        .social-text {
-            flex: 1;
-        }
-
-        .social-title {
-            font-size: 1.2em;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        .social-description {
-            font-size: 0.9em;
-            opacity: 0.9;
-            font-weight: 400;
-        }
-
-        @media (max-width: 768px) {
-
-            .map-container {
-                height: 400px;
-            }
-
-            .container {
-                padding: 15px;
-            }
-            
-            .avatar {
-                width: 180px;
-                height: 90px;
-            }
-            
-            .social-block {
-                padding: 15px;
-            }
-            
-            .social-icon {
-                font-size: 28px;
-            }
-            
-            .social-title {
-                font-size: 1.1em;
-            }
-        }
-    </style>
 </head>
 <body>
+  <!-- Первый блок -->
+  <section class="hero">
     <div class="container">
-        <div class="profile">
-            <img src="./assets/logo-vector.svg" alt="Логотип" class="avatar">
-            <p class="bio">Аренда, ремонт, ТО велосипедов и электровелосипедов Великом Новгороде</p>
+      <header class="header">
+        <img src="./assets/logo-vector.svg" class="logo">
+
+        <nav class="nav">
+          <ul class="nav-links">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <button class="burger" id="burger">&#9776;</button>
+      </header>
+
+      <div class="hero-content">
+        <h1 class="hero-title">ЭЛЕКТРО-<br>ВЕЛОСИПЕДЫ<br>ДЛЯ КУРЬЕРОВ</h1>
+        <div class="image-wrapper">
+          <img src="./assets/bike1.png" alt="Большая картинка">
         </div>
 
-        <div class="links">
-            <a href="https://vk.com/vrumvrum53" class="social-block">
-                <div class="social-content">
-                    <div class="social-icon"><i class="fab fa-vk"></i></div>
-                    <div class="social-text">
-                        <div class="social-title">ВКонтакте</div>
-                        <div class="social-description">Следите за акциями и новостями, связывайтесь через сообщения сообщества</div>
-                    </div>
-                </div>
-            </a>
-
-            <a href="https://t.me/vrumvrum53" class="social-block">
-                <div class="social-content">
-                    <div class="social-icon"><i class="fab fa-telegram"></i></div>
-                    <div class="social-text">
-                        <div class="social-title">Телеграм-чат</div>
-                        <div class="social-description">Подробный прайс лист для курьерских электровелосипедов</div>
-                    </div>
-                </div>
-            </a>
-
-<a href="https://yandex.ru/maps/-/CHFJzH4-" target="_blank" class="social-block">
-                <div class="social-content">
-                    <div class="social-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <div class="social-text">
-                        <div class="social-title">Мы на карте</div>
-                        <div class="social-description">Наш велосервис на Яндекс Картах</div>
-                    </div>
-                </div>
-            </a>
+        <button class="hero-button">АРЕНДОВАТЬ</button>
+      </div>
 
 
 
-            <div class="map-container">
-                <iframe src="https://yandex.ru/maps-reviews-widget/100250847823?comments"></iframe>
-                <a href="https://yandex.ru/maps/org/vrumvrum/100250847823/" 
-                    target="_blank" 
-                    class="map-link">
-                    VrumVrum на карте Великого Новгорода — Яндекс Карты
-                </a>
-            </div>
+  </section>
+
+  <!-- Второй блок -->
+  <section class="info">
+
+    <div class="container">
+      <div class="hero-content">
+      <h2 class="rent-title" >ВЕЛОСИПЕДЫ<br>НА ПРОКАТ</h2>
+      <p class="rent-desc" >Идеально<br>
+          для городских<br>
+          велопрогулок</p>
+      <div class="image-wrapper2">
+        <img src="./assets/bike2.png" alt="Большая картинка">
+      </div>
     </div>
+      <button class="info-button">ПОДРОБНОСТИ</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
